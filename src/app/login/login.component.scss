@@ -1,0 +1,20 @@
+mat-grid-tile:first-child {
+  background: #54a0ff;
+}
+mat-grid-tile:nth-child(2) {
+  background-image: url("src/assets/2283451.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: right;
+  background-size: 800px 600px;
+}
+.example-form {
+  min-width: 150px;
+  max-width: 500px;
+  width: 100%;
+  color: #fff;
+}
+
+.example-full-width {
+  width: 100%;
+}

@@ -1,0 +1,17 @@
+<mat-grid-list cols="2" rowHeight="1:1" gutterSize="0">
+  <mat-grid-tile>
+    <form class="example-form" (ngSubmit)="logar()">
+      <mat-form-field class="example-full-width">
+        <input matInput placeholder="Username" value="Saitama" />
+      </mat-form-field>
+      <mat-form-field class="example-full-width">
+        <input matInput placeholder="Password" value="123" type="password" />
+      </mat-form-field>
+      <button mat-raised-button color="accent" type="submit">
+        Login
+      </button>
+    </form>
+  </mat-grid-tile>
+  <mat-grid-tile></mat-grid-tile>
+</mat-grid-list>
+<lib-form></lib-form>
