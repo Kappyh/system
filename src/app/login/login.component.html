@@ -2,12 +2,23 @@
   <mat-grid-tile>
     <form class="example-form" (ngSubmit)="logar()">
       <mat-form-field class="example-full-width">
-        <input matInput placeholder="Username" value="Saitama" />
+        <input
+          matInput
+          id="input-username"
+          placeholder="Username"
+          value="Saitama"
+        />
       </mat-form-field>
       <mat-form-field class="example-full-width">
-        <input matInput placeholder="Password" value="123" type="password" />
+        <input
+          matInput
+          id="input-password"
+          placeholder="Password"
+          value="123"
+          type="password"
+        />
       </mat-form-field>
-      <button mat-raised-button color="accent" type="submit">
+      <button mat-raised-button id="btn-submit" color="accent" type="submit">
         Login
       </button>
     </form>

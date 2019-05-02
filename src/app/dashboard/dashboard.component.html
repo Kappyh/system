@@ -1,3 +1,79 @@
-<p style="color:red">
-  dashboard works!
-</p>
+<h2 id="p-dash-welcome" style="color:red">
+  Preencha seu cadastro agora!
+</h2>
+<mat-grid-list cols="2" rowHeight="1:1" gutterSize="0">
+  <mat-grid-tile>
+    <br />
+    <form [formGroup]="perfilDoUsuario" (ngSubmit)="cadastrar()">
+      <mat-form-field class="example-full-width">
+        <input
+          formControlName="nomeCompleto"
+          matInput
+          placeholder="Nome completo"
+          value="Escreva seu nome"
+        />
+      </mat-form-field>
+      <mat-form-field class="example-full-width">
+        <mat-label>Sexo</mat-label>
+        <mat-select formControlName="sexo">
+          <mat-option *ngFor="let sexo of sexos" [value]="sexo.valor">
+            {{ sexo.valor }}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+      <mat-form-field class="example-full-width">
+        <input
+          formControlName="dataNascimento"
+          matInput
+          [matDatepicker]="picker"
+          placeholder="Data de Nascimento"
+        />
+        <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+        <mat-datepicker #picker></mat-datepicker>
+      </mat-form-field>
+      <mat-form-field class="example-full-width">
+        <input
+          formControlName="email"
+          matInput
+          placeholder="E-mail"
+          value="example@gmail.com"
+        />
+      </mat-form-field>
+      <div formGroupName="endereco">
+        <mat-form-field class="example-full-width">
+          <input
+            formControlName="rua"
+            matInput
+            placeholder="Rua"
+            value="rua example"
+          />
+        </mat-form-field>
+        <mat-form-field class="example-full-width">
+          <input
+            formControlName="cep"
+            matInput
+            placeholder="Cep"
+            value="0000-000"
+          />
+        </mat-form-field>
+        <mat-form-field class="example-full-width">
+          <input
+            formControlName="cidade"
+            matInput
+            placeholder="Cidade"
+            value="Example"
+          />
+        </mat-form-field>
+      </div>
+      <button
+        mat-raised-button
+        id="btn-submit"
+        color="accent"
+        type="submit"
+        [disabled]="!perfilDoUsuario.valid"
+      >
+        Cadastrar
+      </button>
+    </form>
+  </mat-grid-tile>
+</mat-grid-list>
