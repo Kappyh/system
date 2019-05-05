@@ -32,6 +32,10 @@ export class DashboardComponent implements OnInit {
           Validators.required
         ]),
         cidade: new FormControl("", [Validators.required])
+      }),
+      arquivos: new FormGroup({
+        contratoSocial: new FormControl("", Validators.required),
+        contratoAdesao: new FormControl("", Validators.required)
       })
     });
   }
