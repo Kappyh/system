@@ -17,10 +17,6 @@ export class DashboardComponent implements OnInit {
     this.perfilDoUsuario = this.novoCadastro();
   }
 
-  public cadastrar(): void {
-    console.log(this.perfilDoUsuario.value);
-  }
-
   public novoCadastro(): FormGroup {
     return new FormGroup({
       nomeCompleto: new FormControl("", [
@@ -46,5 +42,9 @@ export class DashboardComponent implements OnInit {
         contratoAdesao: new FormControl("", Validators.required)
       })
     });
+  }
+
+  public cadastrar(): void {
+    console.log(this.perfilDoUsuario.value);
   }
 }
