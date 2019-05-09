@@ -14,7 +14,15 @@ export class DashboardComponent implements OnInit {
 
   ngOnInit() {
     this.sexos = [{ valor: "feminino" }, { valor: "masculino" }];
-    this.perfilDoUsuario = new FormGroup({
+    this.perfilDoUsuario = this.novoCadastro();
+  }
+
+  public cadastrar(): void {
+    console.log(this.perfilDoUsuario.value);
+  }
+
+  public novoCadastro(): FormGroup {
+    return new FormGroup({
       nomeCompleto: new FormControl("", [
         Validators.minLength(10),
         Validators.required
@@ -38,9 +46,5 @@ export class DashboardComponent implements OnInit {
         contratoAdesao: new FormControl("", Validators.required)
       })
     });
-  }
-
-  public cadastrar(): void {
-    console.log(this.perfilDoUsuario.value);
   }
 }

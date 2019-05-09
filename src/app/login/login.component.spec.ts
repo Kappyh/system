@@ -22,4 +22,8 @@ describe('LoginComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+
+  it('needs to have inputs for email and password',()=>{
+    
+  });
 });
